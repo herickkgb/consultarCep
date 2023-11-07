@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Via CEP</string>
+    <string name="cep">CEP</string>
+    <string name="buscar_cep">Buscar Cep</string>
+    <string name="longradouro">Longradouro</string>
+    <string name="bairro">Bairro</string>
+    <string name="cidade">Cidade</string>
+    <string name="estado">Estado</string>
+    <string name="imagem_logo_cep">imagem logo cep</string>
+    <string name="ver_no_mapa">Ver no Google Maps</string>
+</resources>
