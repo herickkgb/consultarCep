@@ -47,10 +47,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnBuscarCep.setOnClickListener {
             cep = binding.editCep.text.toString()
+            binding.progressBar.isVisible = true
 
             if (cep.isEmpty()) {
                 esconderTeclado()
                 Toast.makeText(this, "Preencha o Cep", Toast.LENGTH_SHORT).show()
+                binding.progressBar.isVisible = true
             } else {
                 esconderTeclado()
                 retrofit.setEndereco(cep).enqueue(object : Callback<Endereco> {
@@ -61,10 +63,7 @@ class MainActivity : AppCompatActivity() {
                             val localidade = response.body()?.localidade.toString()
                             val uf = response.body()?.uf.toString()
                             setFormularios(logradouro, bairro, localidade, uf)
-
-
                             binding.btnVerMapa.isVisible = true
-                            binding.progressBar.isVisible = false
 
                         }else{
                             binding.progressBar.isVisible = false
@@ -102,6 +101,7 @@ class MainActivity : AppCompatActivity() {
         binding.editBairro.setText(bairro)
         binding.editCidade.setText(localidade)
         binding.estado.setText(uf)
+        binding.progressBar.isVisible = false
     }
 
     fun esconderTeclado(){
