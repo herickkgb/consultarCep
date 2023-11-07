@@ -14,3 +14,6 @@ Se você procura por uma ferramenta que simplifica a obtenção de dados de ende
 ---
 
 Sinta-se à vontade para adicionar mais detalhes sobre os recursos, a estrutura do código ou qualquer outro aspecto relevante do seu aplicativo que você queira destacar!
+
+# imagem do app
+ ![Imagem do Aplicativo](app/src/main/res/drawable/foto.png)
